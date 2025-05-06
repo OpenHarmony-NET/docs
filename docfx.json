@@ -1,0 +1,43 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern",
+      "templates/material"
+    ],
+    "fileMetadata": {
+      "_appTitle": 
+      {
+        "docs/avalonia/**/*.md": "OpenHarmony.Avalonia",
+        "docs/blazor-hybrid/**/*.md": "OpenHarmony.BlazorHybrid"
+      }
+    },
+    "globalMetadata": {
+      "_appName": "OpenHarmony.NET",
+      "_appTitle": "OpenHarmony.NET",
+      "_appFaviconPath": "images/logo.png",
+      "_appLogoPath": "images/logo.png",
+      "_enableSearch": true,
+      "pdf": false
+    }
+  }
+}
