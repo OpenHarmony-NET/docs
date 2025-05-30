@@ -15,6 +15,8 @@
 winget install zig.zig
 ```
 
+* [LLVM](https://releases.llvm.org/download.html) 编译过程中需要使用 `llvm-objcopy.exe`，需要保证环境变量中存在
+
 * .NET 8.0 SDK 和 .NET 9.0 SDK
 
 * DevEco Studio 最新版本
