@@ -1,0 +1,47 @@
+<footer class="border-top text-secondary">
+    <div class="container-xxl">
+        <div class="d-flex">
+            {{{_appFooter}}}{{^_appFooter}}
+            <div class="language-links">
+                Made with <a href="https://dotnet.github.io/docfx">docfx</a><br>
+                This page also provides in following languages
+                <a href="#" id="zh-cn-link" class="me-2">简体中文</a>
+                <a href="#" id="en-us-link" class="me-2">English</a>
+            </div>
+            {{/_appFooter}}
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentUrl = window.location.href;
+
+        // Define supported languages with their code and element ID
+        const languages = {
+            "zh-cn": { id: "zh-cn-link", name: "简体中文" },
+            "en-us": { id: "en-us-link", name: "English" }
+        };
+
+        function updateLanguageLinks() {
+            const langRegex = /\/docs\/([^\/]+)\//;
+            const match = currentUrl.match(langRegex);
+
+            if (match) {
+                const currentLang = match[1];
+                let pathAndQuery = currentUrl.split(`/docs/${currentLang}/`)[1] || "";
+                const baseUrl = currentUrl.split("/docs/")[0];
+
+                // Update all language links dynamically
+                Object.keys(languages).forEach(langCode => {
+                    const langElement = document.getElementById(languages[langCode].id);
+                    if (langElement) {
+                        langElement.href = `${baseUrl}/docs/${langCode}/${pathAndQuery}`;
+                    }
+                });
+            }
+        }
+
+        updateLanguageLinks();
+    });
+</script>

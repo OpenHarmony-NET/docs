@@ -6,17 +6,31 @@
         "files": [
           "**/*.{md,yml}"
         ],
-        "exclude": [
-          "_site/**"
-        ]
+        "src": "docs/",
+        "dest": "./"
       }
     ],
     "resource": [
       {
         "files": [
           "images/**"
-        ]
+        ],
+        "dest": "./"
+      },
+      {
+        "files": [
+          "docs/_images/**"
+        ],
+        "dest": "./"
+      },
+
+      {
+        "files": [
+          "index.html"
+        ],
+        "dest": "./"
       }
+
     ],
     "output": "_site",
     "template": [
@@ -25,17 +39,16 @@
       "templates/material"
     ],
     "fileMetadata": {
-      "_appTitle": 
-      {
-        "docs/avalonia/**/*.md": "OpenHarmony.Avalonia",
-        "docs/blazor-hybrid/**/*.md": "OpenHarmony.BlazorHybrid"
+      "_appTitle": {
+        "docs/*/avalonia/**/*.md": "OpenHarmony.Avalonia",
+        "docs/*/blazor-hybrid/**/*.md": "OpenHarmony.BlazorHybrid"
       }
     },
     "globalMetadata": {
       "_appName": "OpenHarmony.NET",
       "_appTitle": "OpenHarmony.NET",
       "_appFaviconPath": "images/logo.png",
-      "_appLogoPath": "images/logo.png",
+      "_appLogoPath": "",
       "_enableSearch": true,
       "pdf": false
     }
