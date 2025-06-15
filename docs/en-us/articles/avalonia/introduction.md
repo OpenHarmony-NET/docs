@@ -15,9 +15,12 @@
 winget install zig.zig
 ```
 
+> [!WARNING]
+> It is not recommended to add `clang` to the environment variables, as it may conflict with the build process.
+
 * [LLVM](https://releases.llvm.org/download.html) is needed for the compilation process that uses `llvm-objcopy.exe`, ensure it exists in your environment variables
 
-* .NET 8.0 SDK and .NET 9.0 SDK
+* .NET 9.0 SDK or greater
 
 * Latest version of DevEco Studio
 
@@ -27,10 +30,10 @@ winget install zig.zig
 
 ## Build and Run
 
-* Pull the latest code from [OpenHarmony.Avalonia](https://github.com/OpenHarmony-NET/OpenHarmony.Avalonia)
+* Pull the latest code from [OpenHarmony.Avalonia](https://github.com/OpenHarmony-NET/OpenHarmony.Avalonia), ensure to clone with the `--recursive` option to include submodules
 
 ```shell
-git clone https://github.com/OpenHarmony-NET/OpenHarmony.Avalonia.git --recursive
+git clone https://github.com/OpenHarmony-NET/OpenHarmony.Avalonia.git --recursive # Include submodules
 ```
 
 * Enter the project directory `OpenHarmony.Avalonia`
