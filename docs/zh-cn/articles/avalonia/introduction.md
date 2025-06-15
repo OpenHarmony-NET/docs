@@ -15,9 +15,12 @@
 winget install zig.zig
 ```
 
+> [!WARNING]
+> 不建议将 `clang` 添加到环境变量中，会与构建过程冲突
+
 * [LLVM](https://releases.llvm.org/download.html) 编译过程中需要使用 `llvm-objcopy.exe`，需要保证环境变量中存在
 
-* .NET 8.0 SDK 和 .NET 9.0 SDK
+* .NET 9.0 SDK 或更高版本
 
 * DevEco Studio 最新版本
 
@@ -27,10 +30,10 @@ winget install zig.zig
 
 ## 构建运行
 
-* 拉取 [OpenHarmony.Avalonia](https://github.com/OpenHarmony-NET/OpenHarmony.Avalonia) 的最新代码
+* 拉取 [OpenHarmony.Avalonia](https://github.com/OpenHarmony-NET/OpenHarmony.Avalonia) 的最新代码，请确保使用 `--recursive` 参数来克隆子模块
 
 ```shell
-git clone https://github.com/OpenHarmony-NET/OpenHarmony.Avalonia.git --recursive
+git clone https://github.com/OpenHarmony-NET/OpenHarmony.Avalonia.git --recursive # 包括子模块
 ```
 
 * 进入项目目录`OpenHarmony.Avalonia`
