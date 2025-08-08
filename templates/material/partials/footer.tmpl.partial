@@ -7,6 +7,7 @@
                 This page also provides in following languages
                 <a href="#" id="zh-cn-link" class="me-2">简体中文</a>
                 <a href="#" id="en-us-link" class="me-2">English</a>
+                <a href="#" id="ru-ru-link" class="me-2">Русский</a>
             </div>
             {{/_appFooter}}
         </div>
@@ -20,7 +21,8 @@
         // Define supported languages with their code and element ID
         const languages = {
             "zh-cn": { id: "zh-cn-link", name: "简体中文" },
-            "en-us": { id: "en-us-link", name: "English" }
+            "en-us": { id: "en-us-link", name: "English" },
+            "ru-ru": { id: "ru-ru-link", name: "Русский" }
         };
 
         function updateLanguageLinks() {

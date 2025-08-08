@@ -1,0 +1,10 @@
+- name: Вступление
+  href: index.md
+- name: Начало работы
+  href: articles/index.md
+
+- name: Фреймворки разработки
+- name: Avalonia
+  href: articles/avalonia/introduction.md
+- name: Blazor Hybrid
+  href: articles/blazor-hybrid/introduction.md
